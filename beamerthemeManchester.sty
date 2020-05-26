@@ -1,0 +1,127 @@
+% Copyright 2007-08 by Mark Kambites <Mark.Kambites@manchester.ac.uk>
+%
+% Based on the Boadilla theme by Manual Carro <mcarro@fi.upm.es> which is
+% included in the standard beamer distribution.
+%
+% This file may be distributed and/or modified under the GNU Public
+% License. However, the University of Manchester logo is protected by
+% copyright and trademarks and the file containing it may NOT be
+% distributed without permission.
+
+\mode<presentation>
+
+\newif\ifbeamer@secheader
+\beamer@secheaderfalse
+
+\DeclareOptionBeamer{secheader}{\beamer@secheadertrue}
+\ProcessOptionsBeamer
+
+% These are the official colours for the University logo, and used in
+% conjunction with it give a consistent (if potentially a bit garish!)
+% visual theme.
+
+\definecolor{ManchesterPurple}{HTML}{660099}
+\definecolor{ManchesterYellow}{HTML}{FFCC33}
+\definecolor{ManchesterGrey}{HTML}{999999}
+
+\usecolortheme{rose}
+
+%\setbeamercolor*{palette primary}{use=structure,fg=black,bg=structure.fg!40!white}
+\setbeamercolor*{palette primary}{use=structure,fg=ManchesterYellow,bg=ManchesterPurple}
+\setbeamercolor*{palette secondary}{use=structure,fg=ManchesterPurple,bg=ManchesterYellow}
+\setbeamercolor*{palette tertiary}{use=structure,fg=ManchesterYellow,bg=ManchesterPurple}
+\setbeamercolor*{palette quaternary}{fg=white,bg=black}
+\setbeamercolor*{sidebar}{use=structure,bg=structure.fg}
+
+\setbeamercolor*{palette sidebar primary}{use=structure,fg=structure.fg!10}
+\setbeamercolor*{palette sidebar secondary}{fg=white}
+\setbeamercolor*{palette sidebar tertiary}{use=structure,fg=structure.fg!50}
+\setbeamercolor*{palette sidebar quaternary}{fg=white}
+
+\setbeamercolor*{titlelike}{use=structure,fg=structure.fg}
+
+\setbeamercolor*{separation line}{}
+\setbeamercolor*{fine separation line}{}
+
+% \usecolortheme{dolphin}
+\useinnertheme[shadow]{rounded}
+
+
+% This is a modified version of the outer theme "infolines" originally
+% written by Till Tantau and supplied with beamer.
+
+\setbeamercolor*{author in head/foot}{parent=palette tertiary}
+\setbeamercolor*{title in head/foot}{parent=palette secondary}
+\setbeamercolor*{date in head/foot}{parent=palette primary}
+
+\setbeamercolor*{section in head/foot}{parent=palette tertiary}
+\setbeamercolor*{subsection in head/foot}{parent=palette primary}
+
+\defbeamertemplate*{footline}{infolines theme}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.22\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.6\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+%  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+%    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+%    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+%  \end{beamercolorbox}}%
+  \begin{beamercolorbox}[wd=.18\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\lower0.5ex\hbox{\includegraphics[height=2.25ex]{manchesterlogo.jpg}}\hspace*{1.5em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{1ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\defbeamertemplate*{headline}{infolines theme}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+    \usebeamerfont{section in head/foot}\insertsectionhead\hspace*{2ex}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,left]{subsection in head/foot}%
+    \usebeamerfont{subsection in head/foot}\hspace*{2ex}\insertsubsectionhead
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\setbeamersize{text margin left=1em,text margin right=1em}
+
+
+
+% The following is verbatim from the Boadilla theme. Probably not very
+% important unless you happen to use subsubitems,  but I thought I may
+% as well leave it in!
+% Tills' opinion: should be done in an inner theme, not here.
+
+\usesubitemizeitemtemplate{%
+    \tiny\raise1.5pt\hbox{\color{beamerstructure}$\blacktriangleright$}%
+}
+\usesubsubitemizeitemtemplate{%
+    \tiny\raise1.5pt\hbox{\color{beamerstructure}$\bigstar$}%
+}
+
+\setbeamersize{text margin left=1em,text margin right=1em}
+
+\ifbeamer@secheader\else\setbeamertemplate{headline}[default]\fi
+
+%
+
+%\setbeamertemplate{title page}
+%{
+%    \begin{centering}
+%        \inserttitle
+%
+%        \insertdate
+%    \end{centering}
+%}
+
+\mode
+<all>
+

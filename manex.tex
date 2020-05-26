@@ -1,0 +1,102 @@
+\documentclass{beamer}
+\usetheme{Manchester}
+
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{caveat}[theorem]{Caveat}
+\newtheorem{rmcorollary}[theorem]{Corollary}
+
+\begin{document}
+
+\title{A Beamer Theme For Lovers of The Colour Purple}
+\author[M.Kambites]{Mark Kambites}
+\institute[Manchester]{School of Mathematics, \ University of Manchester}
+\date[INPNBD'08]{The 35th Annual Conference of the \\
+International Network of People with Nothing Better To Do}
+
+\frame{
+  \titlepage
+}
+
+\begin{frame}
+   \frametitle{The Manchester Beamer Theme}
+
+\uncover<1->{\begin{definition}
+\textit{Manchester} is a simple beamer theme for creating presentations
+using the University of Manchester colours and logo.
+\end{definition}}
+
+\uncover<2->{\begin{remark}
+It is based on the Boadilla theme, designed by Manual Carro, which is
+distributed with Beamer.
+\end{remark}}
+
+\uncover<3->{
+\begin{remark}
+As you can see, the default style is quite minimal, showing only
+the speaker/author's name, title, Manchester logo and slide number.
+\end{remark}}
+
+\uncover<4->{\begin{remark}
+As with Boadilla, the option \textrm{\texttt{secheader}} adds a bar at the top
+showing the section and subsection titles.
+\end{remark}}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{The Downside}
+
+\uncover<1->{
+\begin{caveat}
+The theme is still very much experimental, and used at your own risk. I
+take no responsibility if it makes you look foolish in front of all the
+leading experts in your field. \textrm{:-)}
+\end{caveat}
+}
+
+\uncover<2->{
+\begin{rmcorollary}
+Feedback is welcome!
+\end{rmcorollary}
+}
+
+\uncover<3->{
+\begin{caveat}
+The Manchester logo may look blocky if projected very large.
+I am trying to obtain a higher resolution version.
+\end{caveat}
+}
+
+\end{frame}
+
+
+
+
+\begin{frame}
+   \frametitle{Installation and Usage}
+\begin{enumerate}
+\item<1-> Download the files
+\begin{itemize}
+\item \texttt{beamerthemeManchester.sty}
+\item \texttt{manchesterlogo.jpg}
+\item \texttt{manex.tex}
+\end{itemize}
+from Mark's homepage, which you have presumably already found.
+
+\item<2-> Save them somewhere in your \TeX \ path (or if you don't know
+what that means, in the directory where you will put your
+presentation).
+
+\item<3-> Create your presentation (eg.~by modifying \texttt{manex.tex}).
+
+\item<4-> Process it with \texttt{pdflatex}.
+
+\item<5-> If it doesn't look right, go to (3).
+
+\item<6-> Knock 'em dead with your enthralling presentation.
+
+\item<7-> Send feedback to \texttt{Mark.Kambites@manchester.ac.uk}.
+\end{enumerate}
+\end{frame}
+
+\end{document}
