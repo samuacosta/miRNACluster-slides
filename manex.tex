@@ -101,12 +101,9 @@ Requirements
 \frametitle{Methods: Algorithms}
 Unsupervised machine learning: Identifies groups of elements based on a similarity measure (obtained by embedded vectors/all-to-all BLAST).\\~\\
 \begin{enumerate}
-\item<1-> Centroid-based clustering (\textit{k-means++}, Clustal$\Omega$ impl.)\\
-Finds the \textit{k} cluster centres and assigns the elements to their nearest cluster centre, minimising squared distances from the cluster.
-\item<2-> Stochastic graph-based clustering (MCL, ref. impl.)\\
-Finds clusters in graphs using stochastic matrices (Markov matrices) to model the mathematical concept of random walks on a graph.
+\item<1-> Centroid-based clustering (\textit{k-means++}, Clustal$\Omega$ impl.)\\~\\
+\item<2-> Stochastic graph-based clustering (MCL, ref. impl.)\\~\\
 \item<3-> Density-based clustering (DBSCAN, scikit-learn impl.)\\
-Represents clusters as areas of higher density within a dataset. Starts from arbitrary point, evaluates if surrounding neighbour elements comply requirements set by the parameters, and if they do, a cluster is formed.
 \end{enumerate}
 \end{frame}
 
@@ -186,7 +183,7 @@ Similar external similarity measure function, a version of the Rand index correc
 \begin{itemize}
 \item Unsupervised machine learning methods proven very useful for miRNA family detection in large datasets.\\~\\
 \item Stochastic graph-based clustering, and specially, density-based clustering are the most suitable.\\~\\
-\item The developed tool can be effectively used as an automated aid for automatic miRNA family detection or to complement, adjust or improve the miRBase original family predictions.\\~\\
+\item The developed tool, miRNACluster, can be effectively used as an automated aid for miRNA family detection or to complement, adjust or improve the miRBase original family predictions.\\~\\
 \item The tool is publicly available under an open source license at GitHub (\href{http://www.github.com/samuacosta/miRNACluster}{www.github.com/samuacosta/miRNACluster})
 \end{itemize}
 \end{frame}
